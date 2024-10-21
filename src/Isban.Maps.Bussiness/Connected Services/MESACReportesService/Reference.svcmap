@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="5fb4f535-eb86-4a72-91d3-48accf4b32ec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webbmgsrv06:6467/MESACReportesService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MESACReportesService5.xsd" MetadataType="Schema" ID="16ccd315-c2a3-4370-86b0-249e11756303" SourceId="1" SourceUrl="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MESACReportesService4.xsd" MetadataType="Schema" ID="fc237c59-c564-4a9d-9729-c4600629c145" SourceId="1" SourceUrl="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MESACReportesService1.xsd" MetadataType="Schema" ID="f9a1867d-cc4c-4a20-bc5a-d6988b4e6f5f" SourceId="1" SourceUrl="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd5" />
+    <MetadataFile FileName="MESACReportesService2.xsd" MetadataType="Schema" ID="37d52122-9760-4dc1-8bbf-69060a3a2ba4" SourceId="1" SourceUrl="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MESACReportesService3.xsd" MetadataType="Schema" ID="7878fb7e-1701-4d61-8c86-82674d0731ed" SourceId="1" SourceUrl="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MESACReportesService.xsd" MetadataType="Schema" ID="93270b92-1e91-4db5-9428-92ebbaa025b5" SourceId="1" SourceUrl="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MESACReportesService.disco" MetadataType="Disco" ID="efae9b39-dbf4-4ceb-a41c-72dcfc19f72e" SourceId="1" SourceUrl="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?disco" />
+    <MetadataFile FileName="MESACReportesService.wsdl" MetadataType="Wsdl" ID="f017d565-eacb-4bfb-89b2-99859e2aedb4" SourceId="1" SourceUrl="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

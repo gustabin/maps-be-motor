@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="MESACReportesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="MESACReportesService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts" />
+      <xsd:import schemaLocation="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts.Parameters" />
+      <xsd:import schemaLocation="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.Entity.Entity.Reportes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMESACReportesService_CrearMensaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearMensaje" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_CrearMensaje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearMensajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_CrearMensaje_MESACServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts" name="detail" element="q1:MESACServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_EnviarMailsWin_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarMailsWin" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_EnviarMailsWin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarMailsWinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_EnviarMailsWin_MESACServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts" name="detail" element="q2:MESACServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_ObtenerConfiguracion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerConfiguracion" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_ObtenerConfiguracion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerConfiguracionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_ObtenerConfiguracion_MESACServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts" name="detail" element="q3:MESACServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_ObtenerPropiedad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPropiedad" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_ObtenerPropiedad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPropiedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMESACReportesService_ObtenerPropiedad_MESACServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts" name="detail" element="q4:MESACServiceFault" />
+  </wsdl:message>
+  <wsdl:portType name="IMESACReportesService">
+    <wsdl:operation name="CrearMensaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMESACReportesService/CrearMensaje" message="tns:IMESACReportesService_CrearMensaje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMESACReportesService/CrearMensajeResponse" message="tns:IMESACReportesService_CrearMensaje_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMESACReportesService/CrearMensajeMESACServiceFaultFault" name="MESACServiceFaultFault" message="tns:IMESACReportesService_CrearMensaje_MESACServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailsWin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMESACReportesService/EnviarMailsWin" message="tns:IMESACReportesService_EnviarMailsWin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMESACReportesService/EnviarMailsWinResponse" message="tns:IMESACReportesService_EnviarMailsWin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMESACReportesService/EnviarMailsWinMESACServiceFaultFault" name="MESACServiceFaultFault" message="tns:IMESACReportesService_EnviarMailsWin_MESACServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerConfiguracion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMESACReportesService/ObtenerConfiguracion" message="tns:IMESACReportesService_ObtenerConfiguracion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMESACReportesService/ObtenerConfiguracionResponse" message="tns:IMESACReportesService_ObtenerConfiguracion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMESACReportesService/ObtenerConfiguracionMESACServiceFaultFault" name="MESACServiceFaultFault" message="tns:IMESACReportesService_ObtenerConfiguracion_MESACServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPropiedad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMESACReportesService/ObtenerPropiedad" message="tns:IMESACReportesService_ObtenerPropiedad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMESACReportesService/ObtenerPropiedadResponse" message="tns:IMESACReportesService_ObtenerPropiedad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMESACReportesService/ObtenerPropiedadMESACServiceFaultFault" name="MESACServiceFaultFault" message="tns:IMESACReportesService_ObtenerPropiedad_MESACServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MESACReportesService" type="tns:IMESACReportesService">
+    <wsp:PolicyReference URI="#MESACReportesService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearMensaje">
+      <soap12:operation soapAction="http://tempuri.org/IMESACReportesService/CrearMensaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MESACServiceFaultFault">
+        <soap12:fault use="literal" name="MESACServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMailsWin">
+      <soap12:operation soapAction="http://tempuri.org/IMESACReportesService/EnviarMailsWin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MESACServiceFaultFault">
+        <soap12:fault use="literal" name="MESACServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerConfiguracion">
+      <soap12:operation soapAction="http://tempuri.org/IMESACReportesService/ObtenerConfiguracion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MESACServiceFaultFault">
+        <soap12:fault use="literal" name="MESACServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPropiedad">
+      <soap12:operation soapAction="http://tempuri.org/IMESACReportesService/ObtenerPropiedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MESACServiceFaultFault">
+        <soap12:fault use="literal" name="MESACServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MESACReportesService">
+    <wsdl:port name="MESACReportesService" binding="tns:MESACReportesService">
+      <soap12:address location="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

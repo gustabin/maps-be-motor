@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC7D2372-55F9-410F-8CA9-12FD3FADD3C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Isban.MapsMB.Business</RootNamespace>
+    <AssemblyName>Isban.MapsMB.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DESA|AnyCPU'">
+    <OutputPath>bin\DESA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'HOMO|AnyCPU'">
+    <OutputPath>bin\HOMO\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PROD|AnyCPU'">
+    <OutputPath>bin\PROD\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TEST|AnyCPU'">
+    <OutputPath>bin\TEST\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="amqmdnet, Version=8.0.0.0, Culture=neutral, PublicKeyToken=dd3cb1c9aae9ec97, processorArchitecture=MSIL">
+      <HintPath>..\packages\amqmdnet.8.0.0.1\lib\net461\amqmdnet.dll</HintPath>
+    </Reference>
+    <Reference Include="amqmdxcs, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7a58d55a51981a15, processorArchitecture=MSIL">
+      <HintPath>..\packages\amqmdxcs.8.0.0.1\lib\net461\amqmdxcs.dll</HintPath>
+    </Reference>
+    <Reference Include="Isban.Common.Connector.MQ.Data, Version=1.1.0.0, Culture=neutral, PublicKeyToken=ee40c1ce623971fd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\TFS\AAAA\Source Maps MB-SAF\Active Assemblies\Isban.Common.Connector.MQ.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Isban.Common.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=ee40c1ce623971fd, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Common.Data.3.1.0.1\lib\net461\Isban.Common.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Isban.Mercados, Version=3.0.0.19143, Culture=neutral, PublicKeyToken=5b668b7b881cb701, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.3.0.0.19143\lib\net461\Isban.Mercados.dll</HintPath>
+    </Reference>
+    <Reference Include="Isban.Mercados.DataAccess.OracleClient, Version=3.0.0.19143, Culture=neutral, PublicKeyToken=3c2bbd51cd932b50, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.DataAccess.OracleClient.3.0.0.19143\lib\net461\Isban.Mercados.DataAccess.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Isban.Mercados.UnityInject, Version=3.0.0.19143, Culture=neutral, PublicKeyToken=f8284a49928108e8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.UnityInject.3.0.0.19143\lib\net461\Isban.Mercados.UnityInject.dll</HintPath>
+    </Reference>
+    <Reference Include="Isban.Mercados.WebApiClient, Version=3.0.0.19143, Culture=neutral, PublicKeyToken=e3399852017e92f6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.WebApiClient.3.0.0.19144\lib\net461\Isban.Mercados.WebApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.UnityInject.3.0.0.19143\lib\net461\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.UnityInject.3.0.0.19143\lib\net461\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.UnityInject.3.0.0.19143\lib\net461\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.UnityInject.3.0.0.19143\lib\net461\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.UnityInject.3.0.0.19143\lib\net461\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.UnityInject.3.0.0.19143\lib\net461\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Active Assemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.DataAccess.OracleClient.3.0.0.19143\lib\net461\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\NonTransactionInterceptorAttribute.cs" />
+    <Compile Include="BusinessHelper.cs" />
+    <Compile Include="ChequeoBusiness.cs" />
+    <Compile Include="Connected Services\MESACReportesService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MYAService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WSERIService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasBusiness.cs" />
+    <Compile Include="MotorAgdSuscripcionBusiness.cs" />
+    <Compile Include="MotorBusiness.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ExternalWebApiService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Isban.Maps.Bussiness.Entity\Isban.MapsMB.Common.Entity.csproj">
+      <Project>{7ee651d6-1039-4c07-a8d5-5e4715885b54}</Project>
+      <Name>Isban.MapsMB.Common.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isban.Maps.DataAccess\Isban.MapsMB.DataAccess.csproj">
+      <Project>{C59CCA9D-A59C-4FBF-B2AF-90E252D1D770}</Project>
+      <Name>Isban.MapsMB.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isban.Maps.IBussiness\Isban.MapsMB.IBussiness.csproj">
+      <Project>{2724dee3-fd59-4f4a-a50b-fd0eae124dd1}</Project>
+      <Name>Isban.MapsMB.IBussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isban.Maps.IDataAccess\Isban.MapsMB.IDataAccess.csproj">
+      <Project>{A5A6238B-E82E-47E6-B601-0C28B1B5AD15}</Project>
+      <Name>Isban.MapsMB.IDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isban.MapsMB.ColaMq\Isban.MapsMB.ColaMq.csproj">
+      <Project>{EF6246D2-F1A6-48A4-ACE8-93AE8CEEE682}</Project>
+      <Name>Isban.MapsMB.ColaMq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Isban.MapsMB.FaxMailRTF\Isban.MapsMB.FaxMailRTF.csproj">
+      <Project>{032d7c46-2795-487c-87c4-0d675e89bd9a}</Project>
+      <Name>Isban.MapsMB.FaxMailRTF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\MESACReportesService\Isban.MapsMB.Business.MESACReportesService.Configuracion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MESACReportesService\MESACReportesService.wsdl" />
+    <None Include="Connected Services\MESACReportesService\MESACReportesService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MESACReportesService\MESACReportesService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MESACReportesService\MESACReportesService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MESACReportesService\MESACReportesService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MESACReportesService\MESACReportesService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MESACReportesService\MESACReportesService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.confirmarEmailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.getEstadoClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.getEstadoClienteV3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.getParametrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.getStatusClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.getSuscripcionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.registrarConDestinoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.registrarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.updateDestinosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.updateEstadoClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.updateMensajeRecargaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.updateMensajeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Isban.MapsMB.Business.MYAService.updateTyCWhatsappResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MYAService\Services.wsdl" />
+    <None Include="Connected Services\WSERIService\ERIService.wsdl" />
+    <None Include="Connected Services\WSERIService\eriservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WSERIService\eriservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WSERIService\eriservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WSERIService\eriservice3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WSERIService\eriservice4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WSERIService\eriservice5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WSERIService\eriservice6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.CabeceraPieDisclaimerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.Canal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.ConcentracionPatrimonio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.ConsultaEvaluaRiesgo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.Disclaimer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.DisclaimerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.EvaluaRiesgo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.FamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.ObtenerCuadrantesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.ObtenerReglasYDisclaimersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.ObtenerSGDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.Patrimonio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.PerfilInversor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.Persona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.PreguntasTestInv.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.PreguntasTestInversor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.PuntajesTest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.ReglasYDisclaimers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.RespuestaWS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.TipoCambio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.TipoCliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.TipoDisclaimer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSERIService\Isban.MapsMB.Bussiness.WSERIService.TipoRegla.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MESACReportesService\" />
+    <WCFMetadataStorage Include="Connected Services\MYAService\" />
+    <WCFMetadataStorage Include="Connected Services\WSERIService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSERIService\eriservice.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSERIService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSERIService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSERIService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MYAService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MYAService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MYAService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MESACReportesService\MESACReportesService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MESACReportesService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MESACReportesService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MESACReportesService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

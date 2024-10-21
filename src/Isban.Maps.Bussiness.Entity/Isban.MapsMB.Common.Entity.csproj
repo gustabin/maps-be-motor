@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7EE651D6-1039-4C07-A8D5-5E4715885B54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Isban.MapsMB.Common.Entity</RootNamespace>
+    <AssemblyName>Isban.MapsMB.Common.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DESA|AnyCPU'">
+    <OutputPath>bin\DESA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'HOMO|AnyCPU'">
+    <OutputPath>bin\HOMO\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PROD|AnyCPU'">
+    <OutputPath>bin\PROD\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TEST|AnyCPU'">
+    <OutputPath>bin\TEST\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Isban.Mercados, Version=3.0.0.19143, Culture=neutral, PublicKeyToken=5b668b7b881cb701, processorArchitecture=MSIL">
+      <HintPath>..\packages\Isban.Mercados.3.0.0.19143\lib\net461\Isban.Mercados.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Active Assemblies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChequeoAcceso.cs" />
+    <Compile Include="Base\EntityBase.cs" />
+    <Compile Include="Constantes\Business.cs" />
+    <Compile Include="Constantes\Core.cs" />
+    <Compile Include="Constantes\Estructuras.cs" />
+    <Compile Include="Controles\Independientes\Disclaimer.cs" />
+    <Compile Include="Controles\Independientes\ItemDisclaimer.cs" />
+    <Compile Include="CuentaPdc.cs" />
+    <Compile Include="DatosServicios.cs" />
+    <Compile Include="Exceptions\ExceptionHandler.cs" />
+    <Compile Include="Extensions\CommonExtension.cs" />
+    <Compile Include="Extensions\EntityExtension.cs" />
+    <Compile Include="Extensions\FormatExtension.cs" />
+    <Compile Include="Interfaces\IError.cs" />
+    <Compile Include="Interfaces\IFormulario.cs" />
+    <Compile Include="Interfaces\IGuidBase.cs" />
+    <Compile Include="Interfaces\IHashable.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\IMapsEntityResponseBase.cs" />
+    <Compile Include="Interfaces\IResponseEntity.cs" />
+    <Compile Include="Interfaces\IValor.cs" />
+    <Compile Include="ItemError.cs" />
+    <Compile Include="Models\Cell.cs" />
+    <Compile Include="Models\Row.cs" />
+    <Compile Include="Models\Table.cs" />
+    <Compile Include="OrdernBase.cs" />
+    <Compile Include="Request\ActualizarMapsParametro.cs" />
+    <Compile Include="Request\ActualizarMensajeRTF.cs" />
+    <Compile Include="Request\ActualizarMensajeMepReq.cs" />
+    <Compile Include="Request\EnvioMepMYAReq.cs" />
+    <Compile Include="Request\ActualizarTarjetaReq.cs" />
+    <Compile Include="Request\ActualizaTransferencia.cs" />
+    <Compile Include="Request\ActualizarOrdenReq.cs" />
+    <Compile Include="Request\InsertarDisclaimerEriMEPCompraReq.cs" />
+    <Compile Include="Request\ObtenerMensajesMepReq.cs" />
+    <Compile Include="Request\ObtenerTextoMepReq.cs" />
+    <Compile Include="Request\OrdenesMapsReq.cs" />
+    <Compile Include="Request\AdhesionMEPVentaReq.cs" />
+    <Compile Include="Request\AdhesionMEPErrorReq.cs" />
+    <Compile Include="Request\AdhesionMEPCompraReq.cs" />
+    <Compile Include="Request\AltaCuentaOpicsReq.cs" />
+    <Compile Include="Request\AdhesionesMEPReq.cs" />
+    <Compile Include="Request\ArchivoRTFReq.cs" />
+    <Compile Include="Request\CabeceraConsulta.cs" />
+    <Compile Include="Request\CargarCuentasParticipantesReq.cs" />
+    <Compile Include="Request\ConsultaCuentaReq.cs" />
+    <Compile Include="Request\EnviarMensajesNetReq.cs" />
+    <Compile Include="Request\EnviarMensajesReq.cs" />
+    <Compile Include="Request\ActualizarMensaje.cs" />
+    <Compile Include="Request\FaxMailParameter.cs" />
+    <Compile Include="Request\GetDatosCliente.cs" />
+    <Compile Include="Request\GetTitulares.cs" />
+    <Compile Include="Request\ObtenerCuentasRepaReq.cs" />
+    <Compile Include="Request\ObtenerInfoFondos.cs" />
+    <Compile Include="Request\ObtenerTexto.cs" />
+    <Compile Include="Request\MensajeMyA.cs" />
+    <Compile Include="Request\ObtenerMensajes.cs" />
+    <Compile Include="Request\RelacionClienteContrato.cs" />
+    <Compile Include="Request\RTFConsulta.cs" />
+    <Compile Include="Request\RTFWorkflowOnDemandReq.cs" />
+    <Compile Include="Request\TenenciaValuadaFondosRTFRequest.cs" />
+    <Compile Include="Request\VincularCuentasActivasReq.cs" />
+    <Compile Include="Request\WorkflowRTFReq.cs" />
+    <Compile Include="Request\WorkflowSAFReq.cs" />
+    <Compile Include="Request\ReqConfirmacionEri.cs" />
+    <Compile Include="Request\ConsultaLoadAtisRequest.cs" />
+    <Compile Include="Request\SaldoConcertadoNoLiquidadoRequest.cs" />
+    <Compile Include="Request\LoadSaldosRequest.cs" />
+    <Compile Include="Request\UsuarioRacf.cs" />
+    <Compile Include="Request\SimularAltaFondos.cs" />
+    <Compile Include="Request\EjecutarAltaFondos.cs" />
+    <Compile Include="Request\ActualizaEvaRiesgoReq.cs" />
+    <Compile Include="Request\AltaAdhesionMAPSReq.cs" />
+    <Compile Include="Request\BajaOperacionReq.cs" />
+    <Compile Include="Request\ConfirmacionOrdenReq.cs" />
+    <Compile Include="Request\CuentasBloqueadasReq.cs" />
+    <Compile Include="Request\ConsultaSaldoCuentaReq.cs" />
+    <Compile Include="Request\EncuestaDeRiesgoReq.cs" />
+    <Compile Include="Request\FormularioReq.cs" />
+    <Compile Include="Request\GetClientePDC.cs" />
+    <Compile Include="Request\GetCuentas.cs" />
+    <Compile Include="Request\MiddlwareReq.cs" />
+    <Compile Include="Request\ModificarSolicitudOrdenReq.cs" />
+    <Compile Include="KnownParameters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Base\Validaciones.cs" />
+    <Compile Include="Request\CuentasAptasreq.cs" />
+    <Compile Include="Request\SaldoRescatadoRequest.cs" />
+    <Compile Include="Request\SimulaPdcReq.cs" />
+    <Compile Include="Response\AdhesionMEPResp.cs" />
+    <Compile Include="Response\MensajeMEP.cs" />
+    <Compile Include="Response\OrdenesMapsResp.cs" />
+    <Compile Include="Response\AdhesionesMEPCompraResp.cs" />
+    <Compile Include="Response\AltaCuentaResp.cs" />
+    <Compile Include="Response\CuentaAdheridaRTF.cs" />
+    <Compile Include="Response\CuentaFondoRTF.cs" />
+    <Compile Include="Response\AdhesionesMEPResp.cs" />
+    <Compile Include="Response\CuentasActivasRTF.cs" />
+    <Compile Include="Response\DatosTransferencia.cs" />
+    <Compile Include="Response\EspecieFondoRTF.cs" />
+    <Compile Include="Response\FaxMailResponse.cs" />
+    <Compile Include="Response\GetTitularesResponse.cs" />
+    <Compile Include="Response\ItemMovimientoEspecieFondoRTF.cs" />
+    <Compile Include="Response\ListaDeFondosResponse.cs" />
+    <Compile Include="Response\MovimientoEspecieFondoRTF.cs" />
+    <Compile Include="Response\ObtenerCuentasRepaResp.cs" />
+    <Compile Include="Response\ObtenerDireccionResponse.cs" />
+    <Compile Include="Response\OperacionesResp.cs" />
+    <Compile Include="Response\Periodo.cs" />
+    <Compile Include="Response\RescateFCIBPResponse.cs" />
+    <Compile Include="Response\RescateFCIIATXResponse.cs" />
+    <Compile Include="Response\ResultadoTransferencia.cs" />
+    <Compile Include="Response\SaldoCuentaResp.cs" />
+    <Compile Include="Response\SimularFondosResponse.cs" />
+    <Compile Include="Response\TenenciaValuadaFondosRTFResponse.cs" />
+    <Compile Include="Response\Texto.cs" />
+    <Compile Include="Response\Mensaje.cs" />
+    <Compile Include="Response\NupSolicitudes.cs" />
+    <Compile Include="Response\AltaAdhesionMAPSResponse.cs" />
+    <Compile Include="Response\BajaAdhesionMAPS.cs" />
+    <Compile Include="Response\BajaOperacionResp.cs" />
+    <Compile Include="Response\AdheVigenciaVencida.cs" />
+    <Compile Include="Response\SolicitudOrden.cs" />
+    <Compile Include="Response\CargaSolicitudOrden.cs" />
+    <Compile Include="Response\Cliente.cs" />
+    <Compile Include="Response\ClienteCuentaDDC.cs" />
+    <Compile Include="Response\ClienteDDC.cs" />
+    <Compile Include="Response\SaldoConcertadoNoLiquidadoResponse.cs" />
+    <Compile Include="Response\ConsultaLoadAtisResponse.cs" />
+    <Compile Include="Response\LoadSaldosResponse.cs" />
+    <Compile Include="Response\ResultadoFondos.cs" />
+    <Compile Include="Response\ConfirmaRiesgoResponse.cs" />
+    <Compile Include="Response\EvaluaRiesgoResponse.cs" />
+    <Compile Include="Response\CondicionAdhesion.cs" />
+    <Compile Include="Response\ConfirmacionOrdenResponse.cs" />
+    <Compile Include="Response\ControlSimple.cs" />
+    <Compile Include="Response\EstadoDecuentaResp.cs" />
+    <Compile Include="Response\ConsultaPdcResponse.cs" />
+    <Compile Include="Response\ConsultaSaldoCuentaResponse.cs" />
+    <Compile Include="Response\CuentaCliente.cs" />
+    <Compile Include="Response\DatosCuentaIATXResponse.cs" />
+    <Compile Include="Response\FormularioResponse.cs" />
+    <Compile Include="Response\MiddlwareResponse.cs" />
+    <Compile Include="Response\EjecutarAltaFondosResponse.cs" />
+    <Compile Include="Response\ModificarSolicitudOrdenResponse.cs" />
+    <Compile Include="Response\MotorResponse.cs" />
+    <Compile Include="Response\SaldoRescatado.cs" />
+    <Compile Include="Response\SaldoRescatadoResponse.cs" />
+    <Compile Include="Response\SimulaPdcResponse.cs" />
+    <Compile Include="Response\SuscripcionFCIIATXResponse.cs" />
+    <Compile Include="Response\Parametro.cs" />
+    <Compile Include="Response\TitularDDC.cs" />
+    <Compile Include="SucNroCta.cs" />
+    <Compile Include="UsuarioLocal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

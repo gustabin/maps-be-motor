@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts.Parameters" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts.Parameters" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="EnviarMensajeParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AcuseLectura" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AcuseRecibo" type="xs:boolean" />
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Adjunto" nillable="true" type="q1:ArrayOfstring" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AdjuntosBase64String" nillable="true" type="q2:ArrayOfstring" />
+          <xs:element minOccurs="0" name="Asunto" nillable="true" type="xs:string" />
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Copia" nillable="true" type="q3:ArrayOfstring" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CopiaOculta" nillable="true" type="q4:ArrayOfstring" />
+          <xs:element minOccurs="0" name="Emisor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EsHtml" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+          <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="NombreAdjunto" nillable="true" type="q5:ArrayOfstring" />
+          <xs:element minOccurs="0" name="Prioridad" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Receptores" nillable="true" type="q6:ArrayOfstring" />
+          <xs:element minOccurs="0" name="ResponderA" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+          <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="TipoAdjunto" nillable="true" type="q7:ArrayOfstring" />
+          <xs:element minOccurs="0" name="UsuarioMail" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EnviarMensajeParameter" nillable="true" type="tns:EnviarMensajeParameter" />
+  <xs:complexType name="BaseParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseParameter" nillable="true" type="tns:BaseParameter" />
+  <xs:complexType name="EnviarMailsWinParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseParameter">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EnviarMailsWinParameter" nillable="true" type="tns:EnviarMailsWinParameter" />
+  <xs:complexType name="ObtenerConfiguracionParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Aplicativo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Servidor" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObtenerConfiguracionParameter" nillable="true" type="tns:ObtenerConfiguracionParameter" />
+  <xs:complexType name="ObtenerPropiedadParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObtenerPropiedadParameter" nillable="true" type="tns:ObtenerPropiedadParameter" />
+</xs:schema>

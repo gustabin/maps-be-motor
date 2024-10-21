@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:impl="http://services.mya.ar.bsch" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:intf="http://services.mya.ar.bsch" targetNamespace="http://services.mya.ar.bsch" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://services.mya.ar.bsch">
+      <xsd:element name="getEstadoClienteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getEstadoClienteReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusClienteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getStatusClienteReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getEstadoClienteV3Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getEstadoClienteV3Return" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateMensaje">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateMensajeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateMensajeReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateMensajeRecarga">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateMensajeRecargaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateMensajeRecargaReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateDestinos">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateDestinosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateDestinosReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registrarConDestino">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registrarConDestinoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="registrarConDestinoReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getParametros">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getParametrosResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getParametrosReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registrar">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="registrarResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="registrarReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateEstadoCliente">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateEstadoClienteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateEstadoClienteReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSuscripciones">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getSuscripcionesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getSuscripcionesReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getEstadoCliente">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getStatusCliente">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getEstadoClienteV3">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="confirmarEmailResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="confirmarEmailReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="confirmarEmail">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateTyCWhatsappResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="updateTyCWhatsappReturn" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="updateTyCWhatsapp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="xmlFirmado" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="updateTyCWhatsappResponse">
+    <wsdl:part name="parameters" element="intf:updateTyCWhatsappResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateDestinosRequest">
+    <wsdl:part name="parameters" element="intf:updateDestinos" />
+  </wsdl:message>
+  <wsdl:message name="confirmarEmailRequest">
+    <wsdl:part name="parameters" element="intf:confirmarEmail" />
+  </wsdl:message>
+  <wsdl:message name="updateEstadoClienteRequest">
+    <wsdl:part name="parameters" element="intf:updateEstadoCliente" />
+  </wsdl:message>
+  <wsdl:message name="registrarConDestinoResponse">
+    <wsdl:part name="parameters" element="intf:registrarConDestinoResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateMensajeResponse">
+    <wsdl:part name="parameters" element="intf:updateMensajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="confirmarEmailResponse">
+    <wsdl:part name="parameters" element="intf:confirmarEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateTyCWhatsappRequest">
+    <wsdl:part name="parameters" element="intf:updateTyCWhatsapp" />
+  </wsdl:message>
+  <wsdl:message name="getParametrosRequest">
+    <wsdl:part name="parameters" element="intf:getParametros" />
+  </wsdl:message>
+  <wsdl:message name="updateMensajeRecargaResponse">
+    <wsdl:part name="parameters" element="intf:updateMensajeRecargaResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEstadoClienteRequest">
+    <wsdl:part name="parameters" element="intf:getEstadoCliente" />
+  </wsdl:message>
+  <wsdl:message name="registrarResponse">
+    <wsdl:part name="parameters" element="intf:registrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSuscripcionesRequest">
+    <wsdl:part name="parameters" element="intf:getSuscripciones" />
+  </wsdl:message>
+  <wsdl:message name="updateDestinosResponse">
+    <wsdl:part name="parameters" element="intf:updateDestinosResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarConDestinoRequest">
+    <wsdl:part name="parameters" element="intf:registrarConDestino" />
+  </wsdl:message>
+  <wsdl:message name="getStatusClienteRequest">
+    <wsdl:part name="parameters" element="intf:getStatusCliente" />
+  </wsdl:message>
+  <wsdl:message name="getParametrosResponse">
+    <wsdl:part name="parameters" element="intf:getParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEstadoClienteResponse">
+    <wsdl:part name="parameters" element="intf:getEstadoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSuscripcionesResponse">
+    <wsdl:part name="parameters" element="intf:getSuscripcionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStatusClienteResponse">
+    <wsdl:part name="parameters" element="intf:getStatusClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarRequest">
+    <wsdl:part name="parameters" element="intf:registrar" />
+  </wsdl:message>
+  <wsdl:message name="getEstadoClienteV3Response">
+    <wsdl:part name="parameters" element="intf:getEstadoClienteV3Response" />
+  </wsdl:message>
+  <wsdl:message name="updateEstadoClienteResponse">
+    <wsdl:part name="parameters" element="intf:updateEstadoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateMensajeRecargaRequest">
+    <wsdl:part name="parameters" element="intf:updateMensajeRecarga" />
+  </wsdl:message>
+  <wsdl:message name="getEstadoClienteV3Request">
+    <wsdl:part name="parameters" element="intf:getEstadoClienteV3" />
+  </wsdl:message>
+  <wsdl:message name="updateMensajeRequest">
+    <wsdl:part name="parameters" element="intf:updateMensaje" />
+  </wsdl:message>
+  <wsdl:portType name="Services">
+    <wsdl:operation name="getEstadoCliente">
+      <wsdl:input name="getEstadoClienteRequest" message="intf:getEstadoClienteRequest" />
+      <wsdl:output name="getEstadoClienteResponse" message="intf:getEstadoClienteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatusCliente">
+      <wsdl:input name="getStatusClienteRequest" message="intf:getStatusClienteRequest" />
+      <wsdl:output name="getStatusClienteResponse" message="intf:getStatusClienteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getEstadoClienteV3">
+      <wsdl:input name="getEstadoClienteV3Request" message="intf:getEstadoClienteV3Request" />
+      <wsdl:output name="getEstadoClienteV3Response" message="intf:getEstadoClienteV3Response" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMensaje">
+      <wsdl:input name="updateMensajeRequest" message="intf:updateMensajeRequest" />
+      <wsdl:output name="updateMensajeResponse" message="intf:updateMensajeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMensajeRecarga">
+      <wsdl:input name="updateMensajeRecargaRequest" message="intf:updateMensajeRecargaRequest" />
+      <wsdl:output name="updateMensajeRecargaResponse" message="intf:updateMensajeRecargaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateDestinos">
+      <wsdl:input name="updateDestinosRequest" message="intf:updateDestinosRequest" />
+      <wsdl:output name="updateDestinosResponse" message="intf:updateDestinosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarConDestino">
+      <wsdl:input name="registrarConDestinoRequest" message="intf:registrarConDestinoRequest" />
+      <wsdl:output name="registrarConDestinoResponse" message="intf:registrarConDestinoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getParametros">
+      <wsdl:input name="getParametrosRequest" message="intf:getParametrosRequest" />
+      <wsdl:output name="getParametrosResponse" message="intf:getParametrosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="registrar">
+      <wsdl:input name="registrarRequest" message="intf:registrarRequest" />
+      <wsdl:output name="registrarResponse" message="intf:registrarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateEstadoCliente">
+      <wsdl:input name="updateEstadoClienteRequest" message="intf:updateEstadoClienteRequest" />
+      <wsdl:output name="updateEstadoClienteResponse" message="intf:updateEstadoClienteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getSuscripciones">
+      <wsdl:input name="getSuscripcionesRequest" message="intf:getSuscripcionesRequest" />
+      <wsdl:output name="getSuscripcionesResponse" message="intf:getSuscripcionesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmarEmail">
+      <wsdl:input name="confirmarEmailRequest" message="intf:confirmarEmailRequest" />
+      <wsdl:output name="confirmarEmailResponse" message="intf:confirmarEmailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateTyCWhatsapp">
+      <wsdl:input name="updateTyCWhatsappRequest" message="intf:updateTyCWhatsappRequest" />
+      <wsdl:output name="updateTyCWhatsappResponse" message="intf:updateTyCWhatsappResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicesSoapBinding" type="intf:Services">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getEstadoCliente">
+      <wsdlsoap:operation soapAction="getEstadoCliente" />
+      <wsdl:input name="getEstadoClienteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getEstadoClienteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatusCliente">
+      <wsdlsoap:operation soapAction="getStatusCliente" />
+      <wsdl:input name="getStatusClienteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getStatusClienteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEstadoClienteV3">
+      <wsdlsoap:operation soapAction="getEstadoClienteV3" />
+      <wsdl:input name="getEstadoClienteV3Request">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getEstadoClienteV3Response">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMensaje">
+      <wsdlsoap:operation soapAction="updateMensaje" />
+      <wsdl:input name="updateMensajeRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateMensajeResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMensajeRecarga">
+      <wsdlsoap:operation soapAction="updateMensajeRecarga" />
+      <wsdl:input name="updateMensajeRecargaRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateMensajeRecargaResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateDestinos">
+      <wsdlsoap:operation soapAction="updateDestinos" />
+      <wsdl:input name="updateDestinosRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateDestinosResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarConDestino">
+      <wsdlsoap:operation soapAction="registrarConDestino" />
+      <wsdl:input name="registrarConDestinoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="registrarConDestinoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getParametros">
+      <wsdlsoap:operation soapAction="getParametros" />
+      <wsdl:input name="getParametrosRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getParametrosResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrar">
+      <wsdlsoap:operation soapAction="registrar" />
+      <wsdl:input name="registrarRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="registrarResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEstadoCliente">
+      <wsdlsoap:operation soapAction="updateEstadoCliente" />
+      <wsdl:input name="updateEstadoClienteRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateEstadoClienteResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSuscripciones">
+      <wsdlsoap:operation soapAction="getSuscripciones" />
+      <wsdl:input name="getSuscripcionesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getSuscripcionesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmarEmail">
+      <wsdlsoap:operation soapAction="confirmarEmail" />
+      <wsdl:input name="confirmarEmailRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="confirmarEmailResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTyCWhatsapp">
+      <wsdlsoap:operation soapAction="updateTyCWhatsapp" />
+      <wsdl:input name="updateTyCWhatsappRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateTyCWhatsappResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicesService">
+    <wsdl:port name="Services" binding="intf:ServicesSoapBinding">
+      <wsdlsoap:address location="http://wasinetdesamya01:9081/servicios/Services" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

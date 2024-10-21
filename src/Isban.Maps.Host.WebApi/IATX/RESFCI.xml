@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Servicio Stx_Id="RESFCI____" Stx_Ver="160" Log="N" Buffering="S">
+  <Header>
+    <Canal Type="A" Length="2"></Canal>
+    <Canal_Id Type="A" Length="4"></Canal_Id>
+    <SubCanal_Id Type="C" Length="4"></SubCanal_Id>
+    <Canal_Ver Type="A" Length="3"></Canal_Ver>
+    <SubCanal_Tipo Type="A" Length="2"></SubCanal_Tipo>
+    <Subcanal Type="A" Length="4"></Subcanal>
+    <Usuario_Tipo Type="A" Length="2"></Usuario_Tipo>
+    <Usuario_Id Type="A" Length="8"></Usuario_Id>
+    <Usuario_Attr Type="A" Length="2"></Usuario_Attr>
+    <Usuario_Pwd Type="A" Length="8"></Usuario_Pwd>
+    <Idus_Conc Type="A" Length="8"></Idus_Conc>
+    <Num_Sec Type="A" Length="8"></Num_Sec>
+    <Nup Type="A" Length="8"></Nup>
+    <Tipo_Cliente Type="A" Length="1"></Tipo_Cliente>
+    <Tipo_Id_Cliente Type="C" Length="1"></Tipo_Id_Cliente>
+    <Nro_Id_Cliente Type="X" Length="11"></Nro_Id_Cliente>
+    <Tipo_Dni Type="A" Length="1"></Tipo_Dni>
+    <Nro_Dni Type="A" Length="11"></Nro_Dni>
+    <Fecha_Nac Type="A" Length="8"></Fecha_Nac>
+  </Header>
+  <Input>
+    <!--Terminal _safe-->
+    <Terminal_safe Type="A" Length="4"></Terminal_safe>
+
+    <!--Codigo_Fondo-->
+    <Codigo_Fondo Type="N" Length="3"></Codigo_Fondo>
+
+    <!--Codigo_Cliente-->
+    <Codigo_Cliente Type="N" Length="11"></Codigo_Cliente>
+
+    <!--Codigo_Agente-->
+    <Codigo_Agente Type="N" Length="3"></Codigo_Agente>
+
+    <!--Codigo_Canal-->
+    <Codigo_Canal Type="N" Length="3"></Codigo_Canal>
+
+    <!--Importe_bruto del rescate-->
+    <!--12+2-->
+    <Importe_Bruto Type="N" Length="14"></Importe_Bruto>
+    
+    <!--Cantidad_Cuotas _partes-->
+    <!--10+4-->
+    <Cantidad_Cuotas_partes Type="N" Length="14"></Cantidad_Cuotas_partes>
+
+    <!--Forma_Pago-->
+    <Forma_Pago Type="N" Length="2"></Forma_Pago>
+
+    <!--Tipo_Cuenta-->
+    <Tipo_Cuenta Type="N" Length="2"></Tipo_Cuenta>
+
+    <!--Suc._Cuenta-->
+    <Suc_Cuenta Type="N" Length="3"></Suc_Cuenta>
+
+    <!--Nro_Cuenta-->
+    <Nro_Cuenta Type="N" Length="10"></Nro_Cuenta>
+
+    <!--Impre_solicitud-->
+    <Impre_solicitud Type="A" Length="1"></Impre_solicitud>
+
+    <!--Moneda-->
+    <Moneda Type="N" Length="1"></Moneda>
+
+    <!--Número de Certificado a Reversar-->
+    <!--No-->
+    <Nro_Certif_a_Reversar Type="A" Length="10"></Nro_Certif_a_Reversar>
+
+    <!--Monto a Reversar la Operacion para KU-->
+    <!--No-->
+    <Monto_a_Reversar_KU Type="N" Length="14"></Monto_a_Reversar_KU>
+
+    <!--Comision cobrada-->
+    <!--12+2-->
+    <Importe_Rescate_Comision Type="N" Length="14"></Importe_Rescate_Comision>
+
+    <!--Valor neto del rescate-->
+    <!--12+2-->
+    <Importe_Rescate_Neto Type="N" Length="14"></Importe_Rescate_Neto>
+
+  </Input>
+  <Output>
+    <Descripcion_Moneda></Descripcion_Moneda>
+    <Estado_Actual></Estado_Actual>
+    <Motivo_Actual></Motivo_Actual>
+    <Nombre_fondo></Nombre_fondo>
+    <Nro_Rescate></Nro_Rescate>
+    <Importe_Rescate_Neto></Importe_Rescate_Neto>
+    <Importe_Rescate_Comision></Importe_Rescate_Comision>
+    <Importe_Rescate_Bruto></Importe_Rescate_Bruto>
+    <Total_cuotas_partes></Total_cuotas_partes>
+    <Monto_Cambio></Monto_Cambio>
+    <Cotacao_pact></Cotacao_pact>
+    <Marca_KU></Marca_KU>
+  </Output>
+</Servicio>

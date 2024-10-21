@@ -1,0 +1,208 @@
+{
+    "Applications" : [
+        {
+            "Name": "MMAPS-4000",
+            "Hostname" : "webbpsibesrv09",
+            "ApplicationPoolName": "MMAPS-4000",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4000"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4000/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4000"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4001",
+            "Hostname" : "webbpsibesrv09",
+            "ApplicationPoolName": "MMAPS-4001",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4001"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4001/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4001"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4002",
+            "Hostname" : "webbpsibesrv09",
+            "ApplicationPoolName": "MMAPS-4002",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4002"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4002/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4002"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4000",
+            "Hostname" : "webbpsibesrv10",
+            "ApplicationPoolName": "MMAPS-4000",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4000"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4000/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4000"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4001",
+            "Hostname" : "webbpsibesrv10",
+            "ApplicationPoolName": "MMAPS-4001",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4001"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4001/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4001"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4002",
+            "Hostname" : "webbpsibesrv10",
+            "ApplicationPoolName": "MMAPS-4002",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4002"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4002/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4002"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4000",
+            "Hostname" : "webbpsibesrv11",
+            "ApplicationPoolName": "MMAPS-4000",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4000"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4000/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4000"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4001",
+            "Hostname" : "webbpsibesrv11",
+            "ApplicationPoolName": "MMAPS-4001",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4001"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4001/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4001"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4002",
+            "Hostname" : "webbpsibesrv11",
+            "ApplicationPoolName": "MMAPS-4002",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4002"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4002/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4002"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4000",
+            "Hostname" : "webbpsibesrv12",
+            "ApplicationPoolName": "MMAPS-4000",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4000"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4000/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4000"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4001",
+            "Hostname" : "webbpsibesrv12",
+            "ApplicationPoolName": "MMAPS-4001",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4001"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4001/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4001"
+                }
+            ]
+        },
+        {
+            "Name": "MMAPS-4002",
+            "Hostname" : "webbpsibesrv12",
+            "ApplicationPoolName": "MMAPS-4002",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4002"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/production/MMAPS-4002/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4002"
+                }
+            ]
+        }
+    ]
+}

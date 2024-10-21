@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.Entity.Entity.Reportes" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.Entity.Entity.Reportes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Configuracion">
+    <xs:sequence>
+      <xs:element name="_x003C_Actualizar_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Aplicativo_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Estado_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_FechaActual_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_FechaAlta_x003E_k__BackingField" nillable="true" type="xs:dateTime" />
+      <xs:element name="_x003C_Servidor_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_SrvActivo_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Configuracion" nillable="true" type="tns:Configuracion" />
+</xs:schema>

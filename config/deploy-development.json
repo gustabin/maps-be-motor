@@ -1,0 +1,21 @@
+{
+    "Applications" : [
+        {
+            "Name": "MMAPS-4000",
+            "Hostname" : "webbpsibehomo01",
+            "ApplicationPoolName": "MMAPS-4000",
+            "Paths": [
+                {
+                    "Label": "Binaries",
+                    "Source": "$BUILD_PATH/*",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4000"
+                },
+                {
+                    "Label": "Config files",
+                    "Source": "$PATH_CONFIG_ARTIFACT/development/Web.config",
+                    "Target": "D:\\aplic\\Frontend\\MMAPS-4000"
+                }
+            ]
+        }
+    ]
+}

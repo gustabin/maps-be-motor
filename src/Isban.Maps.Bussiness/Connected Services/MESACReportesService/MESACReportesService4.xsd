@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts.Parameters" />
+  <xs:import schemaLocation="http://webbmgsrv06.rio.ar.bsch:6467/MESACReportesService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.Entity.Entity.Reportes" />
+  <xs:element name="CrearMensaje">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts.Parameters" minOccurs="0" name="parameter" nillable="true" type="q1:EnviarMensajeParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearMensajeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearMensajeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarMailsWin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts.Parameters" minOccurs="0" name="parameter" nillable="true" type="q2:EnviarMailsWinParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarMailsWinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EnviarMailsWinResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerConfiguracion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts.Parameters" minOccurs="0" name="parameter" nillable="true" type="q3:ObtenerConfiguracionParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerConfiguracionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.Entity.Entity.Reportes" minOccurs="0" name="ObtenerConfiguracionResult" nillable="true" type="q4:Configuracion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPropiedad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ISBAN.MESAC.ServiceContracts.Parameters" minOccurs="0" name="parameter" nillable="true" type="q5:ObtenerPropiedadParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPropiedadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerPropiedadResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
